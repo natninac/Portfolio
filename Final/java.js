@@ -51,7 +51,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
@@ -64,7 +64,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
@@ -78,7 +78,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
@@ -91,7 +91,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
@@ -104,7 +104,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
@@ -117,7 +117,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
@@ -130,7 +130,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
@@ -143,7 +143,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
