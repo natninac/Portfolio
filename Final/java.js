@@ -21,7 +21,7 @@ const ProjectCategory = {
         client: "BuildTech Solutions",
         role: "Lead Designer",
         images: [
-            "Final/images/side.png",
+            "https://github.com/natninac/Portfolio/blob/main/Final/images/side.png",
             "images/fa2bdc94-7572-42e2-a5f6-d8382a01cdfa_rw_1920.png",
             "images/d9886594-60d7-47f8-b952-b3046dbedfeb_rw_1920.png",
             "images/d2fffd07-d4ef-4f1f-ad72-e32d101d5197_rw_1920.png",
