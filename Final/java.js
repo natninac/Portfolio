@@ -21,12 +21,12 @@ const ProjectCategory = {
         client: "BuildTech Solutions",
         role: "Lead Designer",
         images: [
-            "/images/side.png",
-            "/images/fa2bdc94-7572-42e2-a5f6-d8382a01cdfa_rw_1920.png",
-            "/images/d9886594-60d7-47f8-b952-b3046dbedfeb_rw_1920.png",
-            "/images/d2fffd07-d4ef-4f1f-ad72-e32d101d5197_rw_1920.png",
-            "/images/3407c43c-f8d9-4e8d-8544-c49ecc01c2be_rw_1920.png",
-            "/images/591f66e2-d7fe-4576-9a97-e9e0f4164d0f_rw_1920.png"
+            "images/side.png",
+            "images/fa2bdc94-7572-42e2-a5f6-d8382a01cdfa_rw_1920.png",
+            "images/d9886594-60d7-47f8-b952-b3046dbedfeb_rw_1920.png",
+            "images/d2fffd07-d4ef-4f1f-ad72-e32d101d5197_rw_1920.png",
+            "images/3407c43c-f8d9-4e8d-8544-c49ecc01c2be_rw_1920.png",
+            "images/591f66e2-d7fe-4576-9a97-e9e0f4164d0f_rw_1920.png"
 
         ]
     },
@@ -38,7 +38,7 @@ const ProjectCategory = {
         fullDescription: `A responsive portfolio website...`,
         technologies: ["Solidworks", "Keyshot", "Illustrator"],
         images: [
-            "/images/seat/seat3.png",
+            "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
