@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Essential meta tags for proper rendering and responsiveness -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nat Nina's Portfolio</title>
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
-    <!-- Add container for 3D models -->
+    <!-- Three.js background canvas for 3D model animations -->
     <div id="background-canvas"></div>
+
+    <!-- Main navigation header -->
     <header>
         <nav class="container">
+            <!-- Brand logo (my name) -->
             <a href="#" class="logo">Nat Nina</a>
+            <!-- Navigation and language controls wrapper -->
             <div class="nav-controls">
+                <!-- Mobile menu toggle button -->
                 <button class="menu-button" id="menuButton">Menu</button>
+                <!-- Main navigation menu with bilingual support -->
                 <div id="navMenu" class="nav-menu">
                     <a href="#hero" data-en="About Me" data-fr="À Propos">About Me</a>
                     <a href="#work" data-en="Work" data-fr="Travail">Work</a>
@@ -22,19 +30,18 @@
                     <a href="#education" data-en="Education" data-fr="Éducation">Education</a>
                     <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
                 </div>
-                <div class="menu-button">
-                    <button class="menu-button" id="langToggle">EN</button>
-                    <div class="lang-options" id="langOptions">
-                    <button data-lang="en">English</button>
-                    <button data-lang="fr">French</button>
+                <!-- Language switcher dropdown -->
+            <div class="menu-button">
+                <button id="langToggle" class="menu-button">EN</button>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
 
+    <!-- Main content wrapper -->
     <main>
-        <!-- Hero Section -->
+        <!-- Hero/Introduction section -->
         <section id="hero">
             <div class="container">
                 <h1>Hi, I'm Nat!</h1>
@@ -45,156 +52,167 @@
             </div>
         </section>
 
- <!-- Work Section -->
- <section id="work" class="section">
-    <div class="container">
-         <h2>My Work</h2>
-                
-         <div id="work" class="section">
+        <!-- Portfolio work showcase section -->
+        <section id="work" class="section">
             <div class="container">
-                <h3>Design</h3>
-                <div class="projects design-projects"></div>
+                <h2>My Work</h2>
                 
-                <h3>Coding</h3>
-                <div class="projects coding-projects"></div>
-                
-                <h3>Visuals</h3>
-                <div class="projects branding-projects"></div>
-            </div>
-        </div>
-
-        <!-- Project Modal -->
-        <div id="projectModal" class="modal">
-            <button id="prevProject" class="project-nav-button prev-project">
-                <span class="nav-arrow">↑</span>
-                <span class="nav-project-title"></span>
-            </button>
-        
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                
-                <div class="modal-navigation">
-                    <button class="nav-button prev">&lt;</button>
-                    <div class="image-container">
-                        <img id="modalImage" src="images/side.png" alt="Project Image">
-                     
-                    </div>
-                    <div class="image-counter"></div>
-                    <button class="nav-button next">&gt;</button>
-                </div>
-        
-
-                <h4 id="modalTitle"></h4>
-                <p id="modalDescription"></p>
-            </div>
-
-            <button id="nextProject" class="project-nav-button next-project">
-                <span class="nav-arrow">↓</span>
-                <span class="nav-project-title"></span>
-            </button>
-        </div>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="experience-content">
-                    <div class="experience-item">
-                        <h3>Freelance Social Media Coordinator</h3>
-                        <p>2024 - Present</p>
-                        <ul>
-                            <li>Freelance content creation for local clothing brand</li>
-                            <li>Created visual content such as photos, videos, infographics, and stories</li>
-                            <li>Strategically planned content campaigns</li>
-                        </ul>
-                    </div>
-
-                    <div class="experience-item">
-                        <h3>Designer at Nordesco Industries</h3>
-                        <p>2023 - 2024</p>
-                        <ul>
-                            <li>Designed and modeled various client and in-house products</li>
-                            <li>Worked on production and prototyping using CNC machines</li>
-                            <li>Prepared technical drawings and specifications for manufacturing</li>
-                        </ul>
+                <!-- Project categories grid -->
+                <div id="work" class="section">
+                    <div class="container">
+                        <!-- Design projects container - populated by JavaScript -->
+                        <h3>Design</h3>
+                        <div class="projects design-projects"></div>
+                        
+                        <!-- Coding projects container - populated by JavaScript -->
+                        <h3>Coding</h3>
+                        <div class="projects coding-projects"></div>
+                        
+                        <!-- Visual design projects container - populated by JavaScript -->
+                        <h3>Visuals</h3>
+                        <div class="projects branding-projects"></div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-    <!-- Education Section -->
-        <section id="education" class="section">
-            <div class="container">
-                <h2>Education</h2>
-                <div class="education-content">
-                    <div class="education-item">
-                        <h3>Computation Arts, Concordia University</h3>
-                        <p>2027 (Expected)</p>
-                        <p1>
-                        Program focused on creative applications of computation in interactive media, digital storytelling, and experimental design
-                        </p1>
-
-                    <div class="experience-item">
-                        <h3>Technical Apparel Design, Lasalle College</h3>
-                        <p>2024</p>
-                        <p1>
-                        Designing performance-driven clothing, combining technical skills in pattern-making and material selection with innovative solutions for functionality, comfort, and style.
-                        </p1>
-                    
-
-                    <div class="experience-item">
-                        <h3>Industrial Design, Dawson College</h3>
-                        <p>2023</p>
-                        <p1>
-                        Learned to create functional product designs, focused on ergonomics, user-centric design, and 
-                        sustainable materials.
-                        </p1>
+                <!-- Project details modal window -->
+                <div id="projectModal" class="modal">
+                    <!-- Previous project navigation -->
+                    <button id="prevProject" class="project-nav-button prev-project">
+                        <span class="nav-arrow">↑</span>
+                        <span class="nav-project-title"></span>
+                    </button>
+                
+                    <!-- Modal content container -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        
+                        <!-- Image navigation controls -->
+                        <div class="modal-navigation">
+                            <button class="nav-button prev">&lt;</button>
+                            <div class="image-container">
+                                <img id="modalImage" src="images/side.png" alt="Project Image">
+                            </div>
+                            <div class="image-counter"></div>
+                            <button class="nav-button next">&gt;</button>
+                        </div>
+                
+                        <!-- Project details -->
+                        <h4 id="modalTitle"></h4>
+                        <p id="modalDescription"></p>
                     </div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <!-- Next project navigation -->
+                    <button id="nextProject" class="project-nav-button next-project">
+                        <span class="nav-arrow">↓</span>
+                        <span class="nav-project-title"></span>
+                    </button>
+                </div>
+
+                <!-- Professional experience section -->
+                <section id="experience" class="section">
+                    <div class="container">
+                        <h2>Experience</h2>
+                        <div class="experience-content">
+                            <!-- Current role -->
+                            <div class="experience-item">
+                                <h3>Freelance Social Media Coordinator</h3>
+                                <p>2024 - Present</p>
+                                <ul>
+                                    <li>Freelance content creation for local clothing brand</li>
+                                    <li>Created visual content such as photos, videos, infographics, and stories</li>
+                                    <li>Strategically planned content campaigns</li>
+                                </ul>
+                            </div>
+
+                            <!-- Previous role -->
+                            <div class="experience-item">
+                                <h3>Designer at Nordesco Industries</h3>
+                                <p>2023 - 2024</p>
+                                <ul>
+                                    <li>Designed and modeled various client and in-house products</li>
+                                    <li>Worked on production and prototyping using CNC machines</li>
+                                    <li>Prepared technical drawings and specifications for manufacturing</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </section>
+
+                <!-- Education history section -->
+                <section id="education" class="section">
+                    <div class="container">
+                        <h2>Education</h2>
+                        <div class="education-content">
+                            <!-- Current education -->
+                            <div class="education-item">
+                                <h3>Computation Arts, Concordia University</h3>
+                                <p>2027 (Expected)</p>
+                                <p1>
+                                Program focused on creative applications of computation in interactive media, digital storytelling, and experimental design
+                                </p1>
+
+                            <!-- Previous education -->
+                            <div class="experience-item">
+                                <h3>Technical Apparel Design, Lasalle College</h3>
+                                <p>2024</p>
+                                <p1>
+                                Designing performance-driven clothing, combining technical skills in pattern-making and material selection with innovative solutions for functionality, comfort, and style.
+                                </p1>
+                            
+                            <!-- Earlier education -->
+                            <div class="experience-item">
+                                <h3>Industrial Design, Dawson College</h3>
+                                <p>2023</p>
+                                <p1>
+                                Learned to create functional product designs, focused on ergonomics, user-centric design, and 
+                                sustainable materials.
+                                </p1>
+                            </div>
+
+                <!-- Contact form section -->
+                <section id="contact" class="section">
+                    <div class="container">
+                        <h2>Contact Me</h2>
+                        <form id="contactForm">
+                            <!-- Form input fields -->
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit">Send Message</button>
+                        </form>
                     </div>
-                    
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
+                </section>
+            </main>
         
+<!-- External dependencies -->
+<!-- GSAP animation libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-<!-- Three.js library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-<!-- Add GLTFLoader after Three.js -->
+<!-- Three.js 3D library and loader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 
-<!-- Move JavaScript to external file -->
+<!-- Custom JavaScript -->
 <script src="java.js"></script>
 
-<!-- Firebase CDN -->
+<!-- Firebase libraries -->
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
-
-<!-- Firebase.js file -->
 <script src="firebase.js"></script>
 
 </body>

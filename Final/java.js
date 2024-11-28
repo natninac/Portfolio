@@ -1,13 +1,21 @@
 
-// Project Categories Enum
+
+/**
+ * Project Category Enumeration
+ * Defines the available categories for project organization
+ * Used to maintain consistency in project classification
+ */
 const ProjectCategory = {
     DESIGN: 'design',
     CODING: 'coding',
     BRANDING: 'branding'
 };
 
-
-  // Project Data Structure
+/**
+ * Project Data Structure
+ * Contains all project information displayed on the portfolio
+ * Each project includes metadata, descriptions, and image paths
+ */
   const projectsData = [
     {
         id: "usb-stud-finder",
@@ -44,12 +52,12 @@ const ProjectCategory = {
         ]
     },
     {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
+        id: "L98",
+        title: "L98: Game Design Document",
         category: ProjectCategory.DESIGN,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
+        shortDescription: "Game design document. 2023.",
+        fullDescription: `I created a game design document, accompanied by a short story at the end and some imagery. I was inspired by a variety of game design documents from well-known games: (GTA, Diablo, Deus Ex).`,
+        technologies: ["Blender", "Illustrator", "Photoshop"],
         images: [
             "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
@@ -57,12 +65,12 @@ const ProjectCategory = {
         ]
     },
     {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
+        id: "puffer-jacket",
+        title: "Puffer Jacket",
         category: ProjectCategory.DESIGN,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
+        shortDescription: "Puffer vest designed on Clo3D. 2023.",
+        fullDescription: `The idea of the project was originally to create the pattern, print it out, and sew the jacket using an old military sleeping bag.`,
+        technologies: ["Clo3D", "Blender", "Illustrator"],
         images: [
             "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
@@ -71,12 +79,12 @@ const ProjectCategory = {
     },
     //Coding section
     {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
+        id: "color-field-generator",
+        title: "Color Field Generator",
         category: ProjectCategory.CODING,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
+        shortDescription: "Generates artwork inspired by color field paintings. 2023.",
+        fullDescription: `This project started off as an initiative to explore code for the first time. As someone very inspired by Mark Rothko's art and philosophy, I decided to create code that would generate layouts that roughly looked like colour field paintings.`,
+        technologies: ["P5", "JavaScript", "Illustrator"],
         images: [
             "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
@@ -84,38 +92,27 @@ const ProjectCategory = {
         ]
     },
     {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
+        id: "portfolio-website",
+        title: "Portfolio",
         category: ProjectCategory.CODING,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
+        shortDescription: "Portfolio website for me. 2024.",
+        fullDescription: `A responsive portfolio website I created as an academic project...`,
+        technologies: ["Javascript", "HTML", "CSS"],
         images: [
             "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
     },
+    
     {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
-        category: ProjectCategory.CODING,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
-        images: [
-            "images/seat/seat3.png",
-            "/images/portfolio/image2.jpg",
-            "/images/portfolio/image3.jpg"
-        ]
-    },
-    {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
+        id: "photography",
+        title: "Photography",
         category: ProjectCategory.BRANDING,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
+        shortDescription: "A few photographs I took and edited throughout the years. 2020 Onwards.",
+        fullDescription: `These are all taken on a Fujifilm X100T and most are edited using Lightroom and Photoshop.
+Photography is meanigful to me for it's ability to capture moments, and I enjoy changing the colours and lighting of pictures. This allows me to change the mood of the picture to reflect how I felt when I took it. In that way, I find it similar to memory, which is just as malleable by our moods.`,
+        technologies: ["Adobe Lightroom", "Photoshop", "Illustrator"],
         images: [
             "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
@@ -123,38 +120,28 @@ const ProjectCategory = {
         ]
     },
     {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
+        id: "luminous-threadz",
+        title: "Social Media Branding",
         category: ProjectCategory.BRANDING,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
+        shortDescription: "Social media content creation portfolio. 2024.",
+        fullDescription: `Social media content creation portfolio.`,
+        technologies: ["Photoshop", "Canva", "Illustrator"],
         images: [
             "images/seat/seat3.png",
             "/images/portfolio/image2.jpg",
             "/images/portfolio/image3.jpg"
         ]
     },
-    {
-        id: "shower-seat",
-        title: "TORI Shower Seat",
-        category: ProjectCategory.BRANDING,
-        shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
-        fullDescription: `A responsive portfolio website...`,
-        technologies: ["Solidworks", "Keyshot", "Illustrator"],
-        images: [
-            "images/seat/seat3.png",
-            "/images/portfolio/image2.jpg",
-            "/images/portfolio/image3.jpg"
-        ]
-    },
-
+    
 
 ];
 
 
-
-//Initialize Three.js scene
+/**
+ * Three.js Scene Configuration
+ * Sets up the 3D background animation
+ * Initializes scene, camera, and renderer with specific settings for optimal visual quality
+ */
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ 
@@ -162,25 +149,31 @@ const renderer = new THREE.WebGLRenderer({
     antialias: true 
 });
 
+// Configure renderer settings for better visual quality
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.toneMappingExposure = 1.5;
 renderer.physicallyCorrectLights = true;
 
+// Set up renderer and add to DOM
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('background-canvas').appendChild(renderer.domElement);
 
-//Position camera before adding objects
+// Position camera before adding objects
 camera.position.z = 55;
 
-//Add lights
+/**
+ * Lighting Configuration
+ * Sets up multiple light sources for realistic 3D rendering
+ * Combines ambient, directional, and point lights for depth and shadows
+ */
 const ambientLight = new THREE.AmbientLight('rgb(255, 255, 255)', 10);
 scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight('rgb(255, 255, 255)', 10);
 scene.add(directionalLight);
 
-// Add point lights for extra brightness
+// Add additional point lights for extra brightness
 const pointLight1 = new THREE.PointLight(0xffffff, 20.0);
 pointLight1.position.set(-10, 10, 10);
 scene.add(pointLight1);
@@ -189,20 +182,21 @@ const pointLight2 = new THREE.PointLight(0xffffff, 20.0);
 pointLight2.position.set(10, -10, 10);
 scene.add(pointLight2)
 
-// Initialize loader
+/**
+ * 3D Model Loading and Configuration
+ * Handles loading and setup of 3D models used in the background
+ * Includes material configuration and positioning
+ */
 const loader = new THREE.GLTFLoader();
 
-
-
-// Load models
-let model; // Define model variable
+// Load and configure 3D models
+let model;
 const models = [];
 const modelPaths = [
     'slidey.glb',
     'shape2.glb',
 ];
 
-// Define specific positions for each model
 const modelPositions = [
     { x: -30, y: 15, z: 0 },    // Position for first model
     { x: 30, y: -25, z: -5 },   // Position for second model
@@ -210,45 +204,47 @@ const modelPositions = [
 
 modelPaths.forEach((path, index) => {
     loader.load(path, 
+        // Callback function when model is successfully loaded
+        function(gltf) {
+            const model = gltf.scene;
+            
+            // Apply custom materials to all meshes in the model
+            model.traverse((child) => {
+                if (child.isMesh) {
+                    
+                    // Create a new physical material with desired properties
+                    const material = new THREE.MeshPhysicalMaterial({
+                        color: 0xffffff,
+                        metalness: 1,
+                        roughness: 0.0,
+                        clearcoat: 1.0,
+                        clearcoatRoughness: 0.0,
+                        reflectivity: 1.0,
+                        opacity: 0.8,
+                        emissive: 'rgb(200, 200, 255)',
+                        emissiveIntensity: 0.2,
+                    });
+                    
+                    // Apply the custom material to the mesh
+                    child.material = material;
+                }
+            });
 
-            function(gltf) {
-                const model = gltf.scene;
-                
-                // Apply materials to all meshes in the model
-                model.traverse((child) => {
-                    if (child.isMesh) {
-                        // Create new material
-                        const material = new THREE.MeshPhysicalMaterial({
-                            color: 0xffffff,
-                            metalness: 1,
-                            roughness: 0.0,
-                            clearcoat: 1.0,
-                            clearcoatRoughness: 0.0,
-                            reflectivity: 1.0,
-                            opacity: 0.8,
-                            emissive: 'rgb(200, 200, 255)',       // Light emission color
-                            emissiveIntensity: 0.2,   // Emission strength
-                        });
-                        
-                        // Apply material
-                        child.material = material;
-                    }
-                });
+            // Add environment map for reflections
+            const cubeTextureLoader = new THREE.CubeTextureLoader();
+            const envMap = cubeTextureLoader.load([
+                'px.jpg', 'nx.jpg',
+                'py.jpg', 'ny.jpg',
+                'pz.jpg', 'nz.jpg'
+            ]);
+            scene.environment = envMap;
 
-                // Add environment map for reflections
-const cubeTextureLoader = new THREE.CubeTextureLoader();
-const envMap = cubeTextureLoader.load([
-    'px.jpg', 'nx.jpg',
-    'py.jpg', 'ny.jpg',
-    'pz.jpg', 'nz.jpg'
-]);
-scene.environment = envMap;
-                
-                const position = modelPositions[index];
+            // Position and scale the model
+            const position = modelPositions[index];
             model.position.set(position.x, position.y, position.z);
-                
-                model.scale.set(2, 2, 2);
+            model.scale.set(2, 2, 2);
 
+            // Add the model to the scene and the tracking array
             scene.add(model);
             models.push(model);
         },
@@ -259,12 +255,11 @@ scene.environment = envMap;
     );
 });
 
-// Animation function
+// Animation function that rotates the models
 function animate() {
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animate); // Main animation loop
     
-    
-    // Rotate models if they exist
+    // Rotate all models in the scene
     models.forEach(model => {
         if(model) model.rotation.y += 0.01;
     });
@@ -272,17 +267,31 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-// Start animation
+/**
+ * Animation Loop
+ * Handles continuous animation of 3D models
+ * Implements requestAnimationFrame for smooth performance
+ */
+
 animate();
 
-// Window resize handler
+/**
+ * Window Resize Handler
+ * Ensures responsive behavior of 3D background
+ * Updates camera and renderer parameters on window resize
+ */
+
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// Mouse interaction
+/**
+ * Mouse Interaction Handler
+ * Implements interactive rotation of 3D models based on mouse position
+ * Calculates rotation angles based on cursor coordinates
+ */
 document.addEventListener('mousemove', (event) => {
     models.forEach(model => {
         if(model) {
@@ -295,19 +304,22 @@ document.addEventListener('mousemove', (event) => {
     });
 });
 
-// State Variables
+/**
+ * State Management
+ * Tracks current project and image indices
+ * Used for modal navigation and content display
+ */
 let currentProjectIndex = 0;
 let currentImageIndex = 0;
 
-// DOM Elements
+/**
+ * DOM Elements Cache
+ * Centralizes access to frequently used DOM elements
+ * Improves performance by avoiding repeated querySelector calls
+ */
 const elements = {
-    // Navigation Elements
     menuButton: document.getElementById('menuButton'),
     navMenu: document.getElementById('navMenu'),
-    langToggle: document.getElementById('langToggle'),
-    langOptions: document.getElementById('langOptions'),
-    
-    // Modal Elements
     modal: document.getElementById("projectModal"),
     modalImage: document.getElementById("modalImage"),
     modalTitle: document.getElementById("modalTitle"),
@@ -320,43 +332,37 @@ const elements = {
     imageCounter: document.querySelector(".image-counter"),
     projectCounter: document.querySelector(".project-counter")
 };
-// Navigation Functions
+
+/**
+ * Navigation Menu Toggle
+ * Handles the mobile menu open/close functionality
+ */
 function toggleMenu() {
     elements.navMenu.classList.toggle('active');
 }
 
-function toggleLanguage() {
-    elements.langOptions.classList.toggle('active');
-}
-
-function handleLanguageChange(e) {
-    if (e.target.tagName === 'BUTTON') {
-        elements.langToggle.textContent = e.target.textContent;
-        elements.langOptions.classList.remove('active');
-        // Add language change logic here
-    }
-}
-
+/**
+ * Project Grid Population
+ * Dynamically creates and populates the project grid
+ * Organizes projects by category and attaches event listeners
+ */
 function populateProjects() {
-    // Get containers for each category
     const designContainer = document.querySelector('.design-projects');
     const codingContainer = document.querySelector('.coding-projects');
     const brandingContainer = document.querySelector('.branding-projects');
 
-// Clear existing content
-designContainer.innerHTML = '';
-codingContainer.innerHTML = '';
-brandingContainer.innerHTML = '';
+    // Clear existing content in the project containers
+    designContainer.innerHTML = '';
+    codingContainer.innerHTML = '';
+    brandingContainer.innerHTML = '';
 
-    // Loop through projects and create elements
+    // Loop through the project data and create project items
     projectsData.forEach((project, index) => {
-        // Create project item
         const projectItem = document.createElement('div');
         projectItem.className = 'project-item';
         projectItem.setAttribute('data-index', index);
         projectItem.setAttribute('category', project.category);
         
-        // Set inner HTML using project data
         projectItem.innerHTML = `
             <img src="${project.images[0]}" alt="${project.title}">
             <div class="project-title">
@@ -365,7 +371,7 @@ brandingContainer.innerHTML = '';
             </div>
         `;
         
-        // Add click handler
+        // Add click handler to open the project modal
         projectItem.addEventListener('click', () => {
             currentProjectIndex = index;
             currentImageIndex = 0;
@@ -373,7 +379,7 @@ brandingContainer.innerHTML = '';
             updateModalContent();
         });
         
-        // Add to appropriate container
+        // Add the project item to the appropriate category container
         switch(project.category) {
             case ProjectCategory.DESIGN:
                 designContainer.appendChild(projectItem);
@@ -388,20 +394,24 @@ brandingContainer.innerHTML = '';
     });
 }
 
+/**
+ * Modal Content Update
+ * Updates all modal content based on current project and image indices
+ * Manages navigation button states and counter displays
+ */
 
-
-// Modal Functions
 function updateModalContent() {
     const project = projectsData[currentProjectIndex];
     if (!project) return;
 
     elements.modalTitle.textContent = project.title;
-    elements.modalDescription.textContent = project.fullDescription; // Changed from description to fullDescription
+    elements.modalDescription.textContent = project.fullDescription;
     
     elements.modalImage.src = project.images[currentImageIndex];
     elements.imageCounter.textContent = `Image ${currentImageIndex + 1} / ${project.images.length}`;
     elements.projectCounter.textContent = `Project ${currentProjectIndex + 1} / ${projectsData.length}`;
     
+    // Disable navigation buttons based on the current position
     elements.prevProjectBtn.disabled = currentProjectIndex === 0;
     elements.nextProjectBtn.disabled = currentProjectIndex === projectsData.length - 1;
     
@@ -409,7 +419,10 @@ function updateModalContent() {
     elements.nextImageBtn.disabled = currentImageIndex === project.images.length - 1;
 }
 
-
+/**
+ * Modal Display
+ * Handles showing the modal with specific project content
+ */
 
 function showModal(index) {
     currentProjectIndex = index;
@@ -418,22 +431,18 @@ function showModal(index) {
     updateModalContent();
 }
 
+/**
+ * Modal Close
+ * Handles closing the modal and resetting state
+ */
 function closeModal() {
     elements.modal.style.display = "none";
 }
 
-// Menu Functionality
-document.getElementById('menuButton').addEventListener('click', () => {
-    document.getElementById('navMenu').classList.toggle('active');
-});
+// Event listener for the menu button
+document.getElementById('menuButton').addEventListener('click', toggleMenu);
 
-// Language Toggle
-document.getElementById('langToggle').addEventListener('click', () => {
-    document.getElementById('langOptions').classList.toggle('active');
-});
-
-
-// Navigation Event Listeners
+// Event listeners for project navigation buttons
 elements.prevProjectBtn.addEventListener('click', () => {
     if (currentProjectIndex > 0) {
         currentProjectIndex--;
@@ -450,6 +459,7 @@ elements.nextProjectBtn.addEventListener('click', () => {
     }
 });
 
+// Event listeners for image navigation buttons
 elements.prevImageBtn.addEventListener('click', () => {
     if (currentImageIndex > 0) {
         currentImageIndex--;
@@ -464,33 +474,27 @@ elements.nextImageBtn.addEventListener('click', () => {
     }
 });
 
-// Modal Close Handlers
-elements.closeBtn.addEventListener('click', () => {
-    elements.modal.style.display = "none";
-});
+// Event listener for the modal close button
+elements.closeBtn.addEventListener('click', closeModal);
 
+// Event listener to close the modal when clicking outside
 window.addEventListener('click', (event) => {
     if (event.target === elements.modal) {
         elements.modal.style.display = "none";
     }
 });
 
-// Close menus when clicking outside
+// Event listener to close the navigation menu when clicking outside
 document.addEventListener('click', (event) => {
     const navMenu = document.getElementById('navMenu');
     const menuButton = document.getElementById('menuButton');
-    const langOptions = document.getElementById('langOptions');
-    const langToggle = document.getElementById('langToggle');
 
     if (!navMenu.contains(event.target) && event.target !== menuButton) {
         navMenu.classList.remove('active');
     }
-    if (!langOptions.contains(event.target) && event.target !== langToggle) {
-        langOptions.classList.remove('active');
-    }
 });
 
-// Smooth scroll
+// Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -501,10 +505,10 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-//Adds event when the page loads
+// Event listener to populate the projects when the page loads
 document.addEventListener('DOMContentLoaded', populateProjects);
 
-// Scroll Animations
+// Scroll animation using GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from('.project-item', {
@@ -517,8 +521,13 @@ gsap.from('.project-item', {
         trigger: '#work',
         start: 'top 80%',
     },
-    clearProps: "all"  //Clears properties once animation is done
+    clearProps: "all"  // Clear properties once the animation is done
 });
+
+/**
+ * GSAP Animation Configuration
+ * Sets up scroll-triggered animations for various page elements
+ */
 
 gsap.from('.experience-content', {
     opacity: 100,
@@ -529,6 +538,26 @@ gsap.from('.experience-content', {
         trigger: '#experience',
         start: 'top 80%',
     }
-
 });
 
+/**
+ * Language Toggle Configuration
+ * Handles switching between English and French versions of the site
+ */
+
+if (window.location.pathname.includes('indexfrench.html')) {
+    langToggle.textContent = 'FR';
+} else {
+    langToggle.textContent = 'EN';
+}
+
+// Event listener to toggle between languages
+langToggle.addEventListener('click', () => {
+    if (window.location.pathname.includes('indexfrench.html')) {
+        // Redirect to the English page
+        window.location.href = 'index.html';
+    } else {
+        // Redirect to the French page
+        window.location.href = 'indexfrench.html';
+    }
+});

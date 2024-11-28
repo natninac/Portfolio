@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nat Nina - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <!-- Add container for 3D models -->
+    <div id="background-canvas"></div>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Nat Nina</a>
+            <div class="nav-controls">
+                <button class="menu-button" id="menuButton">Menu</button>
+                <div id="navMenu" class="nav-menu">
+                    <a href="#hero" data-en="About Me" data-fr="À Propos">À Propos</a>
+                    <a href="#work" data-en="Work" data-fr="Travail">Travail</a>
+                    <a href="#experience" data-en="Experience" data-fr="Expérience">Expérience</a>
+                    <a href="#education" data-en="Education" data-fr="Formation">Formation</a>
+                    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+                </div>
+                <div class="menu-button">
+                    <button id="langToggle" class="menu-button">FR</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <h1>Salut, je suis Nat!</h1>
+                <p>Je suis un designer basé à Montréal qui aime donner vie aux idées, que ce soit en créant 
+                des expériences numériques, du contenu visuel ou en travaillant avec des matériaux physiques. 
+                Tout en poursuivant actuellement un baccalauréat en Arts Informatiques à Concordia, mon parcours 
+                inclut le design industriel ainsi que le design de vêtements techniques. Faites défiler pour voir mon travail!</p>
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="section">
+            <div class="container">
+                <h2>Mon Travail</h2>
+                
+                <div id="work" class="section">
+                    <div class="container">
+                        <h3>Design</h3>
+                        <div class="projects design-projects"></div>
+                        
+                        <h3>Programmation</h3>
+                        <div class="projects coding-projects"></div>
+                        
+                        <h3>Visuels</h3>
+                        <div class="projects branding-projects"></div>
+                    </div>
+                </div>
+
+                <!-- Project Modal -->
+                <div id="projectModal" class="modal">
+                    <button id="prevProject" class="project-nav-button prev-project">
+                        <span class="nav-arrow">↑</span>
+                        <span class="nav-project-title"></span>
+                    </button>
+                
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        
+                        <div class="modal-navigation">
+                            <button class="nav-button prev">&lt;</button>
+                            <div class="image-container">
+                                <img id="modalImage" src="images/side.png" alt="Image du Projet">
+                            </div>
+                            <div class="image-counter"></div>
+                            <button class="nav-button next">&gt;</button>
+                        </div>
+                
+                        <h4 id="modalTitle"></h4>
+                        <p id="modalDescription"></p>
+                    </div>
+
+                    <button id="nextProject" class="project-nav-button next-project">
+                        <span class="nav-arrow">↓</span>
+                        <span class="nav-project-title"></span>
+                    </button>
+                </div>
+
+                <!-- Experience Section -->
+                <section id="experience" class="section">
+                    <div class="container">
+                        <h2>Expérience</h2>
+                        <div class="experience-content">
+                            <div class="experience-item">
+                                <h3>Coordinateur Freelance des Médias Sociaux</h3>
+                                <p>2024 - Présent</p>
+                                <ul>
+                                    <li>Création de contenu freelance pour une marque de vêtements locale</li>
+                                    <li>Création de contenu visuel comme des photos, vidéos, infographies et stories</li>
+                                    <li>Planification stratégique des campagnes de contenu</li>
+                                </ul>
+                            </div>
+
+                            <div class="experience-item">
+                                <h3>Designer chez Nordesco Industries</h3>
+                                <p>2023 - 2024</p>
+                                <ul>
+                                    <li>Conception et modélisation de divers produits clients et internes</li>
+                                    <li>Travail sur la production et le prototypage avec des machines CNC</li>
+                                    <li>Préparation des dessins techniques et spécifications pour la fabrication</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section id="education" class="section">
+                    <div class="container">
+                        <h2>Formation</h2>
+                        <div class="education-content">
+                            <div class="education-item">
+                                <h3>Arts Informatiques, Université Concordia</h3>
+                                <p>2027 (Prévu)</p>
+                                <p1>
+                                Programme axé sur les applications créatives de l'informatique dans les médias interactifs,
+                                la narration numérique et le design expérimental
+                                </p1>
+
+                            <div class="experience-item">
+                                <h3>Design de Vêtements Techniques, Collège LaSalle</h3>
+                                <p>2024</p>
+                                <p1>
+                                Conception de vêtements techniques, combinant des compétences techniques en patron et
+                                sélection de matériaux avec des solutions innovantes pour la fonctionnalité, le confort et le style.
+                                </p1>
+                            
+                            <div class="experience-item">
+                                <h3>Design Industriel, Collège Dawson</h3>
+                                <p>2023</p>
+                                <p1>
+                                Apprentissage de la création de designs de produits fonctionnels, axés sur l'ergonomie, 
+                                le design centré sur l'utilisateur et les matériaux durables.
+                                </p1>
+                            </div>
+
+                <!-- Contact Section -->
+                <section id="contact" class="section">
+                    <div class="container">
+                        <h2>Contactez-moi</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Votre Nom" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Votre Email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Sujet" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Votre Message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit">Envoyer le Message</button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+        
+<!-- Same scripts as English version -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="java.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+<script src="firebase.js"></script>
+
+</body>
+</html>
