@@ -1,5 +1,3 @@
-
-
 /**
  * Project Category Enumeration
  * Defines the available categories for project organization
@@ -16,7 +14,7 @@ const ProjectCategory = {
  * Contains all project information displayed on the portfolio
  * Each project includes metadata, descriptions, and image paths
  */
-  const projectsData = [
+const projectsData = [
     {
         id: "usb-stud-finder",
         title: "USB-C Stud Finder",
@@ -35,7 +33,6 @@ const ProjectCategory = {
             "images/d2fffd07-d4ef-4f1f-ad72-e32d101d5197_rw_1920.png",
             "images/3407c43c-f8d9-4e8d-8544-c49ecc01c2be_rw_1920.png",
             "images/591f66e2-d7fe-4576-9a97-e9e0f4164d0f_rw_1920.png"
-
         ]
     },
     {
@@ -59,9 +56,9 @@ const ProjectCategory = {
         fullDescription: `I created a game design document, accompanied by a short story at the end and some imagery. I was inspired by a variety of game design documents from well-known games: (GTA, Diablo, Deus Ex).`,
         technologies: ["Blender", "Illustrator", "Photoshop"],
         images: [
-            "images/seat/seat3.png",
-            "/images/portfolio/image2.jpg",
-            "/images/portfolio/image3.jpg"
+            "images/game/title.png",
+            "images/game/back.png",
+            "images/game/character.png"
         ]
     },
     {
@@ -71,10 +68,12 @@ const ProjectCategory = {
         shortDescription: "Puffer vest designed on Clo3D. 2023.",
         fullDescription: `The idea of the project was originally to create the pattern, print it out, and sew the jacket using an old military sleeping bag.`,
         technologies: ["Clo3D", "Blender", "Illustrator"],
+        coverImage: "images/jacket/puffer.png",
         images: [
-            "images/seat/seat3.png",
-            "/images/portfolio/image2.jpg",
-            "/images/portfolio/image3.jpg"
+            "images/jacket/jacket.mp4"
+        ],
+        imageCaptions: [
+            "3D animation of the puffer jacket design showing fabric draping and material properties"
         ]
     },
     //Coding section
@@ -86,22 +85,23 @@ const ProjectCategory = {
         fullDescription: `This project started off as an initiative to explore code for the first time. As someone very inspired by Mark Rothko's art and philosophy, I decided to create code that would generate layouts that roughly looked like colour field paintings.`,
         technologies: ["P5", "JavaScript", "Illustrator"],
         images: [
-            "images/seat/seat3.png",
-            "/images/portfolio/image2.jpg",
-            "/images/portfolio/image3.jpg"
+            "images/game/generator.png",
+            "images/game/generator2.png",
+            "images/game/generator3.png"
         ]
     },
     {
-        id: "portfolio-website",
-        title: "Portfolio",
+        id: "durvo-website",
+        title: "Website Design",
         category: ProjectCategory.CODING,
-        shortDescription: "Portfolio website for me. 2024.",
-        fullDescription: `A responsive portfolio website I created as an academic project...`,
+        shortDescription: "Product website. 2024.",
+        fullDescription: `An product website concept made on figma. `,
         technologies: ["Javascript", "HTML", "CSS"],
         images: [
-            "images/seat/seat3.png",
-            "/images/portfolio/image2.jpg",
-            "/images/portfolio/image3.jpg"
+            "images/durvo/Landingpage.png",
+            "/images/durvo/Productpage.png",
+            "/images/durvo/Aboutus.png",
+            "/images/durvo/Desktop.png"
         ]
     },
     
@@ -114,9 +114,16 @@ const ProjectCategory = {
 Photography is meanigful to me for it's ability to capture moments, and I enjoy changing the colours and lighting of pictures. This allows me to change the mood of the picture to reflect how I felt when I took it. In that way, I find it similar to memory, which is just as malleable by our moods.`,
         technologies: ["Adobe Lightroom", "Photoshop", "Illustrator"],
         images: [
-            "images/seat/seat3.png",
-            "/images/portfolio/image2.jpg",
-            "/images/portfolio/image3.jpg"
+            "images/photo/bridge.edit.jpg",
+            "images/photo/drink.jpg",
+            "images/photo/metro.jpg",
+            "images/photo/house.jpg",
+            "images/photo/tower.jpg",
+            "images/photo/van.jpg",
+            "images/photo/mirra.jpg",
+            "images/photo/butterfly.jpg",
+            "images/photo/sun.jpg",
+            "images/photo/islandhouse.jpg",
         ]
     },
     {
@@ -132,8 +139,20 @@ Photography is meanigful to me for it's ability to capture moments, and I enjoy 
             "/images/portfolio/image3.jpg"
         ]
     },
-    
-
+    {
+        id: "Audiovisual",
+        title: "Audiovisual work",
+        category: ProjectCategory.BRANDING,
+        shortDescription: "Audio-visual project featuring original track and video. 2025.",
+        fullDescription: `These are all taken on a Fujifilm X100T and most are edited using Lightroom and Photoshop.
+Photography is meanigful to me for it's ability to capture moments, and I enjoy changing the colours and lighting of pictures. This allows me to change the mood of the picture to reflect how I felt when I took it. In that way, I find it similar to memory, which is just as malleable by our moods.`,
+        technologies: ["Adobe Lightroom", "Photoshop", "Illustrator"],
+        coverImage: "images/colors/audiovis.png",
+        images: [
+            "images/photo/project1.mp4",
+            "images/photo/NatColors.mp4"
+        ]
+    },
 ];
 
 
@@ -272,7 +291,6 @@ function animate() {
  * Handles continuous animation of 3D models
  * Implements requestAnimationFrame for smooth performance
  */
-
 animate();
 
 /**
@@ -280,7 +298,6 @@ animate();
  * Ensures responsive behavior of 3D background
  * Updates camera and renderer parameters on window resize
  */
-
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
@@ -321,16 +338,12 @@ const elements = {
     menuButton: document.getElementById('menuButton'),
     navMenu: document.getElementById('navMenu'),
     modal: document.getElementById("projectModal"),
-    modalImage: document.getElementById("modalImage"),
+    modalContent: document.querySelector(".modal-content"),
     modalTitle: document.getElementById("modalTitle"),
     modalDescription: document.getElementById("modalDescription"),
     prevProjectBtn: document.getElementById("prevProject"),
     nextProjectBtn: document.getElementById("nextProject"),
-    prevImageBtn: document.querySelector(".nav-button.prev"),
-    nextImageBtn: document.querySelector(".nav-button.next"),
-    closeBtn: document.querySelector(".close"),
-    imageCounter: document.querySelector(".image-counter"),
-    projectCounter: document.querySelector(".project-counter")
+    closeBtn: document.querySelector(".close")
 };
 
 /**
@@ -363,8 +376,18 @@ function populateProjects() {
         projectItem.setAttribute('data-index', index);
         projectItem.setAttribute('category', project.category);
         
+        let coverSrc;
+
+        if (project.coverImage) {
+            // Use the specified cover image if available
+            coverSrc = project.coverImage;
+        } else {
+            // Otherwise use the first image in the array
+            coverSrc = project.images[0];
+        }
+
         projectItem.innerHTML = `
-            <img src="${project.images[0]}" alt="${project.title}">
+            <img src="${coverSrc}" alt="${project.title}">
             <div class="project-title">
                 ${project.title}
                 <p class="project-description">${project.shortDescription}</p>
@@ -396,34 +419,193 @@ function populateProjects() {
 
 /**
  * Modal Content Update
- * Updates all modal content based on current project and image indices
- * Manages navigation button states and counter displays
+ * Creates a scrollable gallery with full-size images
+ * Maintains original top/bottom project navigation style
  */
-
+/**
+ * Modal Content Update
+ * Creates a scrollable gallery with full-size images
+ * Places navigation arrows outside the modal content box
+ */
 function updateModalContent() {
     const project = projectsData[currentProjectIndex];
     if (!project) return;
 
-    elements.modalTitle.textContent = project.title;
-    elements.modalDescription.textContent = project.fullDescription;
+    // Clear the modal content
+    elements.modalContent.innerHTML = '';
     
-    elements.modalImage.src = project.images[currentImageIndex];
-    elements.imageCounter.textContent = `Image ${currentImageIndex + 1} / ${project.images.length}`;
-    elements.projectCounter.textContent = `Project ${currentProjectIndex + 1} / ${projectsData.length}`;
+    // Create the inner scrollable container
+    const modalInner = document.createElement('div');
+    modalInner.className = 'modal-inner';
+    elements.modalContent.appendChild(modalInner);
     
-    // Disable navigation buttons based on the current position
-    elements.prevProjectBtn.disabled = currentProjectIndex === 0;
-    elements.nextProjectBtn.disabled = currentProjectIndex === projectsData.length - 1;
+    // Create close button
+    const closeButton = document.createElement('span');
+    closeButton.className = 'close';
+    closeButton.innerHTML = '&times;';
+    closeButton.addEventListener('click', closeModal);
+    modalInner.appendChild(closeButton);
     
-    elements.prevImageBtn.disabled = currentImageIndex === 0;
-    elements.nextImageBtn.disabled = currentImageIndex === project.images.length - 1;
+    // Add title
+    const titleElement = document.createElement('h4');
+    titleElement.id = 'modalTitle';
+    titleElement.textContent = project.title;
+    modalInner.appendChild(titleElement);
+
+    // Add tech tags if available
+    if (project.technologies && project.technologies.length > 0) {
+        const techContainer = document.createElement('div');
+        techContainer.className = 'tech-tags';
+        
+        project.technologies.forEach(tech => {
+            const tag = document.createElement('span');
+            tag.className = 'tech-tag';
+            tag.textContent = tech;
+            techContainer.appendChild(tag);
+        });
+        
+        modalInner.appendChild(techContainer);
+    }
+    
+    // Add description
+    const descriptionElement = document.createElement('p');
+    descriptionElement.id = 'modalDescription';
+    descriptionElement.textContent = project.fullDescription;
+    modalInner.appendChild(descriptionElement);
+    
+    // Create gallery container
+    const galleryContainer = document.createElement('div');
+    galleryContainer.className = 'gallery-container';
+    
+    // Process each media item
+    project.images.forEach((mediaPath, index) => {
+        // Create media item container
+        const mediaItem = document.createElement('div');
+        mediaItem.className = 'media-item';
+        
+        // Create media content container
+        const mediaContent = document.createElement('div');
+        mediaContent.className = 'media-content';
+        
+        // Check if the media is a video
+        const isVideo = /\.(mp4|webm|ogg)$/i.test(mediaPath);
+        
+        if (isVideo) {
+            // Create video element
+            const videoElement = document.createElement('video');
+            videoElement.src = mediaPath;
+            videoElement.controls = true;
+            videoElement.autoplay = false;
+            videoElement.style.width = '100%';
+            
+            // Add video to container
+            mediaContent.appendChild(videoElement);
+        } else {
+            // Create image element with full size
+            const imageElement = document.createElement('img');
+            imageElement.src = mediaPath;
+            imageElement.alt = `${project.title} - Image ${index + 1}`;
+            imageElement.style.width = '100%';
+            imageElement.style.height = 'auto';
+            imageElement.style.maxWidth = 'none';
+            
+            // Add image to container
+            mediaContent.appendChild(imageElement);
+        }
+        
+        // Add media content to item
+        mediaItem.appendChild(mediaContent);
+        
+        // Create and add caption
+        const caption = document.createElement('div');
+        caption.className = 'media-caption';
+        
+        // Generate caption text
+        let captionText = '';
+        if (project.imageCaptions && project.imageCaptions[index]) {
+            // Use provided caption if available
+            captionText = project.imageCaptions[index];
+        } else {
+            // Generate a generic caption
+            captionText = isVideo ? 
+                `${project.title} - Video ${index + 1}` : 
+                `${project.title} - Image ${index + 1}`;
+        }
+        
+        caption.textContent = captionText;
+        mediaItem.appendChild(caption);
+        
+        // Add the complete media item to gallery
+        galleryContainer.appendChild(mediaItem);
+    });
+    
+    // Add gallery to modal inner container
+    modalInner.appendChild(galleryContainer);
+    
+    // Create previous project button (outside the modal content)
+    if (!document.getElementById('prevProject')) {
+        const prevProjectBtn = document.createElement('button');
+        prevProjectBtn.id = 'prevProject';
+        prevProjectBtn.className = 'project-nav-button prev-project';
+        prevProjectBtn.innerHTML = `
+            <span class="nav-arrow">↑</span>
+            <span class="nav-project-title">Previous Project</span>
+        `;
+        
+        // Add click event listener
+        prevProjectBtn.addEventListener('click', () => {
+            if (currentProjectIndex > 0) {
+                currentProjectIndex--;
+                updateModalContent();
+            }
+        });
+        
+        // Add to modal but before modal-content
+        elements.modal.insertBefore(prevProjectBtn, elements.modalContent);
+    }
+    
+    // Create next project button (outside the modal content)
+    if (!document.getElementById('nextProject')) {
+        const nextProjectBtn = document.createElement('button');
+        nextProjectBtn.id = 'nextProject';
+        nextProjectBtn.className = 'project-nav-button next-project';
+        nextProjectBtn.innerHTML = `
+            <span class="nav-project-title">Next Project</span>
+            <span class="nav-arrow">↓</span>
+        `;
+        
+        // Add click event listener
+        nextProjectBtn.addEventListener('click', () => {
+            if (currentProjectIndex < projectsData.length - 1) {
+                currentProjectIndex++;
+                updateModalContent();
+            }
+        });
+        
+        // Add to modal after modal-content
+        elements.modal.appendChild(nextProjectBtn);
+    }
+    
+    // Update navigation button states
+    const prevProjectBtn = document.getElementById('prevProject');
+    const nextProjectBtn = document.getElementById('nextProject');
+    
+    if (prevProjectBtn) {
+        prevProjectBtn.disabled = currentProjectIndex === 0;
+    }
+    
+    if (nextProjectBtn) {
+        nextProjectBtn.disabled = currentProjectIndex === projectsData.length - 1;
+    }
+    
+    // Scroll to top of modal content
+    modalInner.scrollTop = 0;
 }
 
 /**
  * Modal Display
  * Handles showing the modal with specific project content
  */
-
 function showModal(index) {
     currentProjectIndex = index;
     currentImageIndex = 0;
@@ -441,38 +623,6 @@ function closeModal() {
 
 // Event listener for the menu button
 document.getElementById('menuButton').addEventListener('click', toggleMenu);
-
-// Event listeners for project navigation buttons
-elements.prevProjectBtn.addEventListener('click', () => {
-    if (currentProjectIndex > 0) {
-        currentProjectIndex--;
-        currentImageIndex = 0;
-        updateModalContent();
-    }
-});
-
-elements.nextProjectBtn.addEventListener('click', () => {
-    if (currentProjectIndex < projectsData.length - 1) {
-        currentProjectIndex++;
-        currentImageIndex = 0;
-        updateModalContent();
-    }
-});
-
-// Event listeners for image navigation buttons
-elements.prevImageBtn.addEventListener('click', () => {
-    if (currentImageIndex > 0) {
-        currentImageIndex--;
-        updateModalContent();
-    }
-});
-
-elements.nextImageBtn.addEventListener('click', () => {
-    if (currentImageIndex < projectsData[currentProjectIndex].images.length - 1) {
-        currentImageIndex++;
-        updateModalContent();
-    }
-});
 
 // Event listener for the modal close button
 elements.closeBtn.addEventListener('click', closeModal);
@@ -528,7 +678,6 @@ gsap.from('.project-item', {
  * GSAP Animation Configuration
  * Sets up scroll-triggered animations for various page elements
  */
-
 gsap.from('.experience-content', {
     opacity: 100,
     y: 50,
@@ -544,7 +693,6 @@ gsap.from('.experience-content', {
  * Language Toggle Configuration
  * Handles switching between English and French versions of the site
  */
-
 if (window.location.pathname.includes('indexfrench.html')) {
     langToggle.textContent = 'FR';
 } else {

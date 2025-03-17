@@ -74,39 +74,35 @@
                     </div>
                 </div>
 
-                <!-- Project details modal window -->
-                <div id="projectModal" class="modal">
-                    <!-- Previous project navigation -->
-                    <button id="prevProject" class="project-nav-button prev-project">
-                        <span class="nav-arrow">↑</span>
-                        <span class="nav-project-title"></span>
-                    </button>
+                <!-- Project details modal window with scrollable gallery -->
+<div id="projectModal" class="modal">
+    <!-- Modal content container -->
+    <div class="modal-content" id="modalContent">
+        <span class="close">&times;</span>
+        
+        <!-- Project details -->
+        <h4 id="modalTitle"></h4>
+        <p id="modalDescription"></p>
+        
+        <!-- Gallery will be inserted here by JavaScript -->
+        
+        <!-- Project navigation buttons -->
+        <div class="project-nav-container">
+            <button id="prevProject" class="project-nav-button prev-project">
+                <span class="nav-arrow">←</span>
+            </button>
+            
+            <button id="nextProject" class="project-nav-button next-project">
+            
+                <span class="nav-arrow">→</span>
+            </button>
+        </div>
+    </div>
+</div>
                 
-                    <!-- Modal content container -->
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        
-                        <!-- Image navigation controls -->
-                        <div class="modal-navigation">
-                            <button class="nav-button prev">&lt;</button>
-                            <div class="image-container">
-                                <img id="modalImage" src="images/side.png" alt="Project Image">
-                            </div>
-                            <div class="image-counter"></div>
-                            <button class="nav-button next">&gt;</button>
-                        </div>
-                
-                        <!-- Project details -->
-                        <h4 id="modalTitle"></h4>
-                        <p id="modalDescription"></p>
-                    </div>
+                      
 
-                    <!-- Next project navigation -->
-                    <button id="nextProject" class="project-nav-button next-project">
-                        <span class="nav-arrow">↓</span>
-                        <span class="nav-project-title"></span>
-                    </button>
-                </div>
+                   
 
                 <!-- Professional experience section -->
                 <section id="experience" class="section">

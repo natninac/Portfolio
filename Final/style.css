@@ -191,7 +191,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two columns by default */
     grid-template-rows: repeat(2, 1fr); /* Two rows by default */
-    gap: 40px; /* Consistent spacing */
+    gap: 10px; /* Consistent spacing */
     width: 100%;
     margin-bottom: 60px;
     align-items: stretch; /* Ensures equal height */
@@ -279,6 +279,7 @@ h4 {
     Fixed position for overlay
     Z-index to stay on top
 */
+/* Modal Styles with external navigation buttons */
 .modal {
     display: none;
     position: fixed;
@@ -287,54 +288,122 @@ h4 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.85);
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    border-radius: 20px; /* Increased corner radius for all corners */
+    overflow: hidden;
+}
+.modal {
+    border-radius: 0; /* Remove this as it's not needed for the fullscreen overlay */
 }
 
-/* Modal content container */
+/* Create an inner container for the scrollable content */
+.modal-inner {
+    padding: 30px;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-right: -17px; /* Hide the scrollbar by pushing it outside the container */
+    padding-right: 47px; /* Add extra padding to compensate for the hidden scrollbar */
+}
+
+/* Webkit scrollbar styling for the inner container */
+.modal-inner::-webkit-scrollbar {
+    width: 10px;
+}
+
+.modal-inner::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.modal-inner::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.modal-inner::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+/* Firefox scrollbar styling */
+.modal-inner {
+    scrollbar-width: thin;
+    scrollbar-color: #c0c0c0 #f1f1f1;
+}
+
+/* Modal content with integrated scrollbar and rounded corners */
 .modal-content {
     background-color: #fff;
-    max-width: 800px;
+    max-width: 1200px;
     width: 90%;
-    overflow-y: auto; /* Enable vertical scrolling for content */
-    max-height: 90vh;
-    border-radius: 8px;
+    overflow: hidden; /* Hide the default scrollbar */
+    max-height: 85vh;
+    border-radius: 20px;
     position: relative;
-    padding: 20px;
-}
-
-/* Close button styling */
-.close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 3;
-    width: 40px;
-    height: 40px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #ffffff;
-    transition: all 0.3s ease;
+    flex-direction: column;
 }
 
-.close:hover {
-    background: #e0e0e0;
-    transform: rotate(90deg);
+.modal-content::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Light grey track */
+    border-radius: 10px; /* Rounded track */
 }
 
-/* Modal navigation buttons */
+.modal-content::-webkit-scrollbar-thumb {
+    background: #c0c0c0; /* Grey thumb */
+    border-radius: 10px; /* Rounded thumb */
+    border: 2px solid #f1f1f1; /* Creates padding around the thumb */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0; /* Darker grey when hovering */
+}
+
+/* Firefox scrollbar styling */
+.modal-content {
+    scrollbar-width: thin; /* "thin", "auto", or "none" */
+    scrollbar-color: #c0c0c0 #f1f1f1; /* thumb and track color */
+}
+
+/* Make sure the content inside still has proper padding */
+.modal-content {
+    padding: 30px;
+}
+
+/* Make sure the corners of the modal content's children are also rounded */
+.modal-content > * {
+    border-radius: 10px; /* Slightly smaller radius for inner elements */
+}
+
+/* Specifically round the corners of media content */
+
+.media-content {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 15px; /* Consistent with modal content */
+    overflow: hidden;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.media-content img, 
+.media-content video {
+    border-radius: 15px; /* Match media container */
+}
+
+/* Project navigation buttons - positioned outside the modal-content */
 .project-nav-button {
     background-color: #fff;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px; /* Match the modal content's border radius */
     padding: 15px;
     width: 90%;
     max-width: 800px;
@@ -344,6 +413,7 @@ h4 {
     justify-content: center;
     gap: 10px;
     transition: all 0.3s ease;
+    margin: 10px 0;
 }
 
 /* Navigation button states */
@@ -366,71 +436,104 @@ h4 {
     transform: translateY(5px);
 }
 
-/* Modal image container and navigation */
-.modal-navigation {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 8px;
-    background: #ffffff;
-}
-
-#modalImage {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* Modal image navigation buttons */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    z-index: 2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-.nav-button.prev { left: 10px; }
-.nav-button.next { right: 10px; }
-
-/* Modal counters */
-.image-counter,
-.project-counter {
-    position: absolute;
-    bottom: 10px;
-    background: none;
-    color: rgb(0, 0, 0);
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 14px;
-}
-
-.image-counter { right: 100px; }
-
-/* Modal content styling */
+/* Enhanced title and description */
 #modalTitle {
     width: 100%;
-    margin: auto;
-    font-size: 24px;
+    margin: 0 auto 15px auto;
+    font-size: 28px;
     color: #333;
+    font-weight: 600;
 }
 
 #modalDescription {
-    color: #666;
-    line-height: 1.6;
+    color: #555;
+    line-height: 1.7;
+    font-size: 18px;
+    max-width: 95%;
+    margin: 0 auto 30px auto; /* Added bottom margin to separate from gallery */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* Subtle divider between description and gallery */
+}
+
+/* Gallery container */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+/* Media item container - holds image/video and caption */
+.media-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Image/video container sizing */
+.media-content {
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background: #f8f8f8;
+    max-height: 600px;
+
+    
+}
+
+/* Image styling for full-size display */
+.media-content img {
+    width: auto; /* Allow width to adjust based on height */
+    max-width: 100%; /* Ensure it doesn't overflow container width */
+    max-height: 600px; /* Set maximum height */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure image is fully visible */
+    border-radius: 15px;
+    margin: 0 auto; /* Center the image */
+    display: block;
+}
+
+/* Video styling for full-size display */
+.media-content video {
+    width: auto;
+    max-width: 100%;
+    max-height: 600px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Caption styling */
+.media-caption {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    padding: 0 15px;
+}
+
+/* Tech tags container */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 30px;
+}
+
+/* Tech tag styling */
+.tech-tag {
+    padding: 4px 12px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
 }
 
 /* Experience Section Styles */
@@ -546,6 +649,51 @@ button[type="submit"]:disabled::after {
     to { transform: rotate(360deg); }
 }
 
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .modal-content {
+        padding: 20px;
+    }
+    
+    #modalTitle {
+        font-size: 24px;
+    }
+    
+    #modalDescription {
+        font-size: 16px;
+    }
+    
+    .media-content {
+        max-height: none;
+    }
+}
+
+    /* Close button styling */
+    .close {
+        position: absolute;
+        right: 35px;
+        top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        z-index: 3;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #ffffff;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .close:hover {
+        background: #f0f0f0;
+        transform: rotate(90deg);
+        box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    }
+
 /* Responsive Design 
    Breakpoints chosen from common device sizes
 */
@@ -580,5 +728,51 @@ button[type="submit"]:disabled::after {
     .project-item {
         min-height: 120px;
         padding: 20px;
+    }
+    
+    /* Modal responsive adjustments */
+    .modal-content {
+        padding: 15px;
+    }
+    
+    .gallery-container {
+        gap: 30px;
+    }
+    
+    .media-content {
+        max-height: none;
+    }
+    
+    
+    #modalTitle {
+        font-size: 22px;
+    }
+    
+    /* Fix for mobile hero section */
+    #hero p {
+        margin-right: 0;
+    }
+    
+    #hero h1 {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 10px;
+    }
+    
+    .media-caption {
+        font-size: 14px;
+    }
+    
+    .tech-tag {
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+    
+    #modalDescription {
+        font-size: 16px;
     }
 }
