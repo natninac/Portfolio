@@ -375,9 +375,9 @@ const ProjectCategory = {
     
             images: [
     
-                "images/photo/project1.mp4",
+                "https://github.com/natninac/Portfolio/raw/refs/heads/main/images/colors/project1.mp4",
     
-                "images/photo/NatColors.mp4"
+                "https://github.com/natninac/Portfolio/raw/refs/heads/main/images/colors/NatColors.mp4"
     
             ],
     imageCaptions: [
