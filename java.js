@@ -108,7 +108,7 @@ const ProjectCategory = {
             images: [
     
                 "images/seat/seat3.png",
-    "images/seat/seat.mp4",
+    "https://github.com/natninac/Portfolio/raw/refs/heads/main/images/seat/seat.mp4",
     
                 "images/seat/image2.jpg",
     
@@ -141,7 +141,7 @@ const ProjectCategory = {
             images: [
     
                 "images/game/title.png",
-    "images/game/animation.mp4",
+    "https://github.com/natninac/Portfolio/raw/refs/heads/main/images/game/animation.mp4",
     
                 "images/game/back.png",
     
@@ -179,7 +179,7 @@ const ProjectCategory = {
     
             images: [
     
-                "images/jacket/jacket.mp4"
+                "https://github.com/natninac/Portfolio/raw/refs/heads/main/images/jacket/jacket.mp4"
     
             ],
     
@@ -334,7 +334,7 @@ const ProjectCategory = {
     
                 "images/branding/monochrome.jpg",
     "images/branding/lumi.png",
-    "images/branding/reel.mp4",
+    "https://github.com/natninac/Portfolio/raw/refs/heads/main/images/branding/reel.mp4",
    
     "images/branding/ecom1.jpg",
     "images/branding/ecom2.jpg",
