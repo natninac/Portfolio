@@ -278,19 +278,19 @@ const ProjectCategory = {
     
                 "images/photo/bridge.edit.jpg",
     
-                "images/photo/drink.jpg",
+                "images/photo/drink.JPG",
     
-                "images/photo/metro.jpg",
+                "images/photo/metro.JPG",
     
                 "images/photo/house.jpg",
     
                 "images/photo/tower.jpg",
     
-                "images/photo/van.jpg",
+                "images/photo/van.JPG",
     
-                "images/photo/mirra.jpg",
+                "images/photo/mirra.JPG",
     
-                "images/photo/butterfly.jpg",
+                "images/photo/butterfly.JPG",
     
                 "images/photo/sun.jpg",
     
