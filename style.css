@@ -338,10 +338,10 @@ h4 {
 /* Modal content with integrated scrollbar and rounded corners */
 .modal-content {
     background-color: #fff;
-    max-width: 1200px;
-    width: 90%;
+    max-width: 1800px;
+    width: 95%;
     overflow: hidden; /* Hide the default scrollbar */
-    max-height: 85vh;
+    max-height: 95vh;
     border-radius: 20px;
     position: relative;
     box-shadow: 0 5px 25px rgba(0,0,0,0.15);
@@ -399,41 +399,56 @@ h4 {
     border-radius: 15px; /* Match media container */
 }
 
-/* Project navigation buttons - positioned outside the modal-content */
+/* Project navigation container - holds both buttons side by side */
+.project-nav-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px 30px;
+    border-top: 1px solid #eee;
+    background: #fafafa;
+    margin-top: auto;
+}
+
+/* Project navigation buttons - positioned inside the modal */
 .project-nav-button {
     background-color: #fff;
-    border: none;
-    border-radius: 20px; /* Match the modal content's border radius */
-    padding: 15px;
-    width: 90%;
-    max-width: 800px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     transition: all 0.3s ease;
-    margin: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    flex: 1;
 }
 
 /* Navigation button states */
 .project-nav-button:not(:disabled):hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    background: #e0e0e0;
+    background: #f5f5f5;
+    border-color: #333;
 }
 
 .project-nav-button:disabled {
-    opacity: 0.5;
+    opacity: 0.3;
     cursor: not-allowed;
+    background: #f9f9f9;
 }
 
-.prev-project:not(:disabled):hover {
-    transform: translateY(-5px);
+.nav-arrow {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.next-project:not(:disabled):hover {
-    transform: translateY(5px);
+.nav-project-title {
+    font-size: 14px;
 }
 
 /* Enhanced title and description */
