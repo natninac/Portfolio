@@ -302,7 +302,6 @@ h4 {
 
 /* Create an inner container for the scrollable content */
 .modal-inner {
-    padding: 30px;
     overflow-y: auto;
     flex-grow: 1;
     margin-right: -17px; /* Hide the scrollbar by pushing it outside the container */
@@ -376,6 +375,7 @@ h4 {
 /* Make sure the content inside still has proper padding */
 .modal-content {
     padding: 30px;
+    padding-bottom: 0px;
 }
 
 /* Make sure the corners of the modal content's children are also rounded */
@@ -404,9 +404,9 @@ h4 {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-    padding: 20px 30px;
+    padding: 10px;
     border-top: 1px solid #eee;
-    background: #fafafa;
+    background: transparent ;
     margin-top: auto;
 }
 
@@ -415,7 +415,7 @@ h4 {
     background-color: #fff;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
-    padding: 12px 20px;
+    padding: 12px 10px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -431,7 +431,7 @@ h4 {
 /* Navigation button states */
 .project-nav-button:not(:disabled):hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     background: #f5f5f5;
     border-color: #333;
 }
@@ -667,7 +667,8 @@ button[type="submit"]:disabled::after {
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .modal-content {
-        padding: 20px;
+        padding-bottom: 0px;
+        
     }
     
     #modalTitle {
@@ -748,6 +749,7 @@ button[type="submit"]:disabled::after {
     /* Modal responsive adjustments */
     .modal-content {
         padding: 15px;
+        padding-bottom: 0px ;
     }
     
     .gallery-container {
