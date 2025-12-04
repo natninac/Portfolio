@@ -372,8 +372,8 @@ function toggleMenu() {
 }
 
 function populateProjects() {
-    const designContainer = document.querySelector('.design-projects');
-    const codingContainer = document.querySelector('.coding-projects');
+    const designContainer = document.querySelector('.interfaces-projects');
+    const codingContainer = document.querySelector('.industrial-projects');
     const brandingContainer = document.querySelector('.branding-projects');
 
     designContainer.innerHTML = '';
@@ -404,10 +404,10 @@ function populateProjects() {
         });
 
         switch(project.category) {
-            case ProjectCategory.INDUSTRIAL:
+            case ProjectCategory.INTERFACES:
                 designContainer.appendChild(projectItem);
                 break;
-            case ProjectCategory.INTERFACES:
+            case ProjectCategory.INDUSTRIAL:
                 codingContainer.appendChild(projectItem);
                 break;
             case ProjectCategory.BRANDING:
@@ -480,15 +480,11 @@ function updateModalContent() {
             videoElement.src = mediaPath;
             videoElement.controls = true;
             videoElement.autoplay = false;
-            videoElement.style.width = '100%';
             mediaContent.appendChild(videoElement);
         } else {
             const imageElement = document.createElement('img');
             imageElement.src = mediaPath;
             imageElement.alt = `${project.title} - Image ${index + 1}`;
-            imageElement.style.width = '100%';
-            imageElement.style.height = 'auto';
-            imageElement.style.maxWidth = 'none';
             mediaContent.appendChild(imageElement);
         }
         
