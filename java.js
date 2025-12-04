@@ -133,6 +133,41 @@ const projectsData = [
         ]
     },
     {
+        id: "owl",
+        title: "Imagination Station",
+        category: ProjectCategory.CODING,
+        shortDescription: "Children's app design for Owl Kids magazine. 2025.",
+        fullDescription: `The Imagination Station is an article database and storytelling facilitator. `,
+        technologies: ["Figma"],
+        images: [
+  "images/owlkids/Owl kids slides_Page_18.png",
+  "images/owlkids/Owl kids slides_Page_17.png",
+  "images/owlkids/Owl kids slides_Page_15.png",
+  "images/owlkids/Owl kids slides_Page_16.png",
+  "images/owlkids/Owl kids slides_Page_14.png",
+  "images/owlkids/Owl kids slides_Page_12.png",
+  "images/owlkids/Owl kids slides_Page_13.png",
+  "images/owlkids/Owl kids slides_Page_10.png",
+  "images/owlkids/Owl kids slides_Page_11.png",
+  "images/owlkids/Owl kids slides_Page_09.png",
+  "images/owlkids/Owl kids slides_Page_07.png",
+  "images/owlkids/Owl kids slides_Page_08.png",
+  "images/owlkids/Owl kids slides_Page_06.png",
+  "images/owlkids/Owl kids slides_Page_05.png",
+  "images/owlkids/Owl kids slides_Page_04.png",
+  "images/owlkids/Owl kids slides_Page_03.png",
+  "images/owlkids/Owl kids slides_Page_02.png",
+  "images/owlkids/Owl kids slides_Page_01.png"
+],
+
+        imageCaptions: [
+            "Landing page",
+            "Product page",
+            "'About us' section",
+            
+        ]
+    },
+    {
         id: "photography",
         title: "Photography",
         category: ProjectCategory.BRANDING,
