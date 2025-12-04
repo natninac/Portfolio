@@ -372,8 +372,8 @@ function toggleMenu() {
 }
 
 function populateProjects() {
-    const designContainer = document.querySelector('.industrial-projects');
-    const codingContainer = document.querySelector('.interfaces-projects');
+    const designContainer = document.querySelector('.design-projects');
+    const codingContainer = document.querySelector('.coding-projects');
     const brandingContainer = document.querySelector('.branding-projects');
 
     designContainer.innerHTML = '';
