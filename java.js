@@ -2,8 +2,8 @@
  * Project Category Enumeration
  */
 const ProjectCategory = {
-    DESIGN: 'design',
-    CODING: 'coding',
+    INTERFACES: 'interfaces',
+    INDUSTRIAL: 'industrial',
     BRANDING: 'branding'
 };
 
@@ -14,7 +14,7 @@ const projectsData = [
     {
         id: "usb-stud-finder",
         title: "USB-C Stud Finder",
-        category: ProjectCategory.DESIGN,
+        category: ProjectCategory.INDUSTRIAL,
         shortDescription: "A modern solution for construction professionals",
         fullDescription: `A comprehensive design project for a next-generation stud finder...`,
         technologies: ["Solidworks", "Keyshot", "Adobe Suite"],
@@ -42,7 +42,7 @@ const projectsData = [
     {
         id: "shower-seat",
         title: "TORI Shower Seat",
-        category: ProjectCategory.DESIGN,
+        category: ProjectCategory.INDUSTRIAL,
         shortDescription: "Shower seat for individuals with reduced mobility. 2023.",
         fullDescription: `During my last year studying industrial design, I was assigned a folding shower seat to design. I worked on this project for a whole school year.`,
         technologies: ["Solidworks", "Keyshot", "Adobe Suite"],
@@ -66,7 +66,7 @@ const projectsData = [
     {
         id: "L98",
         title: "L98: Game Design Document",
-        category: ProjectCategory.DESIGN,
+        category: ProjectCategory.BRANDING,
         shortDescription: "Game design document. 2023.",
         fullDescription: `I created a game design document, accompanied by a short story at the end and some imagery. I was inspired by a variety of game design documents from well-known games: (GTA, Diablo, Deus Ex).`,
         technologies: ["Blender", "Illustrator", "Photoshop"],
@@ -83,25 +83,46 @@ const projectsData = [
             "Character design"
         ]
     },
-    {
-        id: "puffer-jacket",
-        title: "Puffer Jacket",
-        category: ProjectCategory.DESIGN,
-        shortDescription: "Puffer vest designed on Clo3D. 2023.",
-        fullDescription: `This is an animation I created using a puffer vest model I designed on Clo3d.`,
-        technologies: ["Clo3D", "Blender", "Illustrator"],
-        coverImage: "images/jacket/puffer.png",
+   
+      {
+        id: "owl",
+        title: "Imagination Station",
+        category: ProjectCategory.INTERFACES,
+        shortDescription: "Children's app design for Owl Kids magazine. 2025.",
+        fullDescription: `The Imagination Station is an article database and storytelling facilitator. `,
+        technologies: ["Figma"],
         images: [
-            "https://github.com/natninac/Portfolio/raw/refs/heads/main/images/jacket/jacket.mp4"
-        ],
+  "images/owlkids/Owl kids slides_Page_01.png",
+  "images/owlkids/Owl kids slides_Page_02.png",
+  "images/owlkids/Owl kids slides_Page_03.png",
+  "images/owlkids/Owl kids slides_Page_04.png",
+  "images/owlkids/Owl kids slides_Page_05.png",
+  "images/owlkids/Owl kids slides_Page_06.png",
+  "images/owlkids/Owl kids slides_Page_08.png",
+  "images/owlkids/Owl kids slides_Page_07.png",
+  "images/owlkids/Owl kids slides_Page_09.png",
+  "images/owlkids/Owl kids slides_Page_11.png",
+  "images/owlkids/Owl kids slides_Page_10.png",
+  "images/owlkids/Owl kids slides_Page_13.png",
+  "images/owlkids/Owl kids slides_Page_12.png",
+  "images/owlkids/Owl kids slides_Page_14.png",
+  "images/owlkids/Owl kids slides_Page_16.png",
+  "images/owlkids/Owl kids slides_Page_15.png",
+  "images/owlkids/Owl kids slides_Page_17.png",
+  "images/owlkids/Owl kids slides_Page_18.png"
+],
+
         imageCaptions: [
-            "3D animation of the puffer jacket design showing fabric draping and material properties"
+            "Landing page",
+            "Product page",
+            "'About us' section",
+            
         ]
     },
     {
         id: "color-field-generator",
         title: "Color Field Generator",
-        category: ProjectCategory.CODING,
+        category: ProjectCategory.INTERFACES,
         shortDescription: "Generates artwork inspired by color field paintings. 2023.",
         fullDescription: `This project started off as an initiative to explore code for the first time. As someone very inspired by Mark Rothko's art and philosophy, I decided to create code that would generate layouts that roughly looked like colour field paintings. Try it here: https://natninac.github.io/Color_Field_Generator/`,
         technologies: ["P5", "JavaScript"],
@@ -115,7 +136,7 @@ const projectsData = [
     {
         id: "durvo-website",
         title: "Website Design",
-        category: ProjectCategory.CODING,
+        category: ProjectCategory.INTERFACES,
         shortDescription: "Product website. 2024.",
         fullDescription: `A product website concept made on figma. `,
         technologies: ["Figma"],
@@ -132,41 +153,7 @@ const projectsData = [
             ""
         ]
     },
-    {
-        id: "owl",
-        title: "Imagination Station",
-        category: ProjectCategory.CODING,
-        shortDescription: "Children's app design for Owl Kids magazine. 2025.",
-        fullDescription: `The Imagination Station is an article database and storytelling facilitator. `,
-        technologies: ["Figma"],
-        images: [
-  "images/owlkids/Owl kids slides_Page_18.png",
-  "images/owlkids/Owl kids slides_Page_17.png",
-  "images/owlkids/Owl kids slides_Page_15.png",
-  "images/owlkids/Owl kids slides_Page_16.png",
-  "images/owlkids/Owl kids slides_Page_14.png",
-  "images/owlkids/Owl kids slides_Page_12.png",
-  "images/owlkids/Owl kids slides_Page_13.png",
-  "images/owlkids/Owl kids slides_Page_10.png",
-  "images/owlkids/Owl kids slides_Page_11.png",
-  "images/owlkids/Owl kids slides_Page_09.png",
-  "images/owlkids/Owl kids slides_Page_07.png",
-  "images/owlkids/Owl kids slides_Page_08.png",
-  "images/owlkids/Owl kids slides_Page_06.png",
-  "images/owlkids/Owl kids slides_Page_05.png",
-  "images/owlkids/Owl kids slides_Page_04.png",
-  "images/owlkids/Owl kids slides_Page_03.png",
-  "images/owlkids/Owl kids slides_Page_02.png",
-  "images/owlkids/Owl kids slides_Page_01.png"
-],
-
-        imageCaptions: [
-            "Landing page",
-            "Product page",
-            "'About us' section",
-            
-        ]
-    },
+  
     {
         id: "photography",
         title: "Photography",
@@ -385,8 +372,8 @@ function toggleMenu() {
 }
 
 function populateProjects() {
-    const designContainer = document.querySelector('.design-projects');
-    const codingContainer = document.querySelector('.coding-projects');
+    const designContainer = document.querySelector('.industrial-projects');
+    const codingContainer = document.querySelector('.interfaces-projects');
     const brandingContainer = document.querySelector('.branding-projects');
 
     designContainer.innerHTML = '';
@@ -417,10 +404,10 @@ function populateProjects() {
         });
 
         switch(project.category) {
-            case ProjectCategory.DESIGN:
+            case ProjectCategory.INDUSTRIAL:
                 designContainer.appendChild(projectItem);
                 break;
-            case ProjectCategory.CODING:
+            case ProjectCategory.INTERFACES:
                 codingContainer.appendChild(projectItem);
                 break;
             case ProjectCategory.BRANDING:
