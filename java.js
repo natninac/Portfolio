@@ -92,6 +92,7 @@ const projectsData = [
         fullDescription: `The Imagination Station is an article database and storytelling facilitator. `,
         technologies: ["Figma"],
         images: [
+            "images/owlkids/Owl kids slides_Page_18.png",
   "images/owlkids/Owl kids slides_Page_01.png",
   "images/owlkids/Owl kids slides_Page_02.png",
   "images/owlkids/Owl kids slides_Page_03.png",
@@ -108,8 +109,8 @@ const projectsData = [
   "images/owlkids/Owl kids slides_Page_14.png",
   "images/owlkids/Owl kids slides_Page_16.png",
   "images/owlkids/Owl kids slides_Page_15.png",
-  "images/owlkids/Owl kids slides_Page_17.png",
-  "images/owlkids/Owl kids slides_Page_18.png"
+  "images/owlkids/Owl kids slides_Page_17.png"
+  
 ],
 
         imageCaptions: [
@@ -290,7 +291,7 @@ modelPaths.forEach((path, index) => {
                         clearcoatRoughness: 0.0,
                         reflectivity: 1.0,
                         opacity: 0.8,
-                        emissive: 'rgb(200, 200, 255)',
+                        emissive: 'rgba(101, 101, 101, 1)',
                         emissiveIntensity: 0.2,
                     });
                     child.material = material;
