@@ -120,20 +120,7 @@ const projectsData = [
             
         ]
     },
-    {
-        id: "color-field-generator",
-        title: "Color Field Generator",
-        category: ProjectCategory.INTERFACES,
-        shortDescription: "Generates artwork inspired by color field paintings. 2023.",
-        fullDescription: `This project started off as an initiative to explore code for the first time. As someone very inspired by Mark Rothko's art and philosophy, I decided to create code that would generate layouts that roughly looked like colour field paintings. Try it here: https://natninac.github.io/Color_Field_Generator/`,
-        technologies: ["P5", "JavaScript"],
-        images: [
-            "images/game/generator.png",
-            "images/game/generator2.png",
-            "images/game/generator3.png"
-        ],
-        imageCaptions: ["", "", ""]
-    },
+    
     {
         id: "durvo-website",
         title: "Website Design",

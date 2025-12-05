@@ -31,7 +31,7 @@ Position fixed ensures the canvas stays behind all content
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(to bottom, #ffffff, #e6dcec);  
+    background: linear-gradient(to bottom, #ffffff, #daeaf9);  
     height: 100%;
     z-index: -1;  /* Ensures it stays behind other content */
     pointer-events: none;  /* Allows clicking through to content */
